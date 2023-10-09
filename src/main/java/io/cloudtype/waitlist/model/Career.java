@@ -26,16 +26,22 @@ public class Career {
     @Column(name="end_date")
     @Temporal(value = TemporalType.DATE)
     private java.util.Date endDate;
+
     @Column(name="company")
     private String company;
+
     @Column(name="department")
     private String department;
+
     @Column(name="rank")
     private String rank;
+
     @Column(name="position")
     private String position;
+
     @Column(name = "work")
     private String work;
+    
     @Column(name = "technical_book")
     @Lob
     private String technicalBook;
