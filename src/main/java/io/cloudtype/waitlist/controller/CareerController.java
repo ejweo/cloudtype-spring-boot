@@ -39,7 +39,6 @@ public class CareerController {
         Career updateCareer = careerRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Career not found."));
         updateCareer.setName(careerInfo.getName());
         updateCareer.setNum(careerInfo.getNum());
-        updateCareer.setPhoneNum(careerInfo.getPhoneNum());
 
         careerRepository.save(updateCareer);
 
