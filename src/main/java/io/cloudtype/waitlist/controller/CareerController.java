@@ -37,8 +37,8 @@ public class CareerController {
     @PutMapping("{id}")
     public ResponseEntity<Career> updateCareer(@PathVariable Long id, @RequestBody Career careerInfo) {
         Career updateCareer = careerRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Career not found."));
-        updateCareer.setName(careerInfo.getName());
-        updateCareer.setNum(careerInfo.getNum());
+        updateCareer.setStartDate(careerInfo.getStartDate());
+        updateCareer.setEndDate(careerInfo.getEndDate());
 
         careerRepository.save(updateCareer);
 
